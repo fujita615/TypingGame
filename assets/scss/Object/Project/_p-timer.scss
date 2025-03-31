@@ -1,0 +1,19 @@
+@use '../../Foundation';
+
+.p-timer {
+display: flex;
+text-align: end;
+    &__count {
+        display: block;
+        font-size:4.4rem;
+        width: 8rem;
+        text-align: right;         
+    }
+    &__icon {
+        margin: auto;
+        max-width: 90%;
+        @include Foundation.mq('tab-pc') {
+            max-width: 60%;
+        }
+    }
+}

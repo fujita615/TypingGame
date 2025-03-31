@@ -1,0 +1,20 @@
+@use '../../Foundation';
+
+.p-standard {
+    background-color: Foundation.$base;
+    font-family: Foundation.$j-family;
+    &__container {
+        margin: 5rem auto;
+        width: 90%;
+        @include Foundation.mq('tab-pc') {
+            width: 80%;
+        }
+        &.p-standard__container--appear {
+            animation-name: fade;
+            animation-delay: 10s;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+    }
+}

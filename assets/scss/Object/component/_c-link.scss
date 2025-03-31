@@ -1,0 +1,37 @@
+@use '../../Foundation';
+
+.c-link {
+    text-decoration: underline;
+    color: inherit;
+    &.c-link--no-line {
+        text-decoration: none;
+    }
+    &.c-link--hover {
+        display: block;
+        margin-left: auto;
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                color: Foundation.$base_gray;
+            }
+        }
+        @media (hover: none) {
+            &:active {
+                color: Foundation.$base_gray;
+            }
+        }
+    }
+    &.c-link--footer {
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                color: Foundation.$base_gray;
+            }
+        }
+        @media (hover: none) {
+            &:active {
+                color: Foundation.$base_gray;
+            }
+        }
+    }
+}

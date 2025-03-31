@@ -1,0 +1,46 @@
+@use '../../Foundation';
+
+.p-table {
+    &__containber{
+        max-width: Foundation.$max;
+        margin:  auto;
+        margin-bottom: 4em;
+        padding: 0 2rem;
+        @include Foundation.mq('tab-pc') {
+            padding: 0 4rem;
+            margin-bottom: 3em;
+        }
+    }
+    &__head{
+       width: 80vw;
+       margin: auto;
+        padding-bottom: 1em;
+        color: Foundation.$base_black;
+        font-style: Foundation.$e-family;
+        @include Foundation.mq('tab-pc') {
+            font-size: 3.6em;
+        }
+    }
+    &__column {
+        padding: 1em;
+        font-size: 1.6em;
+    }
+    &__caption{
+        text-align: right;
+        caption-side: bottom;
+        padding: 1em;
+        font-size: 1em;
+    }
+    &__description{
+        width: 90vw;
+        margin: auto;
+        text-align: center;
+        margin-top: 1em;
+        font-size: 1em;
+        line-height: 1.4em;
+        font-family: Foundation.$j-family;
+        @include Foundation.mq('tab-pc') {
+            font-size: 1.6em;
+        }
+    }
+}

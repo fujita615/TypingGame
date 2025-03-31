@@ -1,0 +1,74 @@
+@use '../../Foundation';
+
+.p-game {
+    position: relative;
+    &__container {
+        top: 20%;
+        text-align: center;
+        width: 100%;
+    }
+    &__button{
+        margin-top: 2em;
+    }
+    &__Ranking{
+        padding-bottom: 5rem;
+      margin:auto
+    }
+    &__area {
+        overflow: hidden;
+        font-style:Foundation.$j-family;
+        display: flex;
+        align-items: stretch;
+        max-width: 95vw;
+        margin:auto;
+        justify-content: space-around;
+        height: 20vh;
+        align-items: center;
+        font-size: 4em;
+        @media (hover: none) {
+            height: 14vh;
+        }
+        @media (hover: hover) {
+            height: 45vh;
+        }
+        @include Foundation.mq('tab-pc') {
+            font-size: 7em;
+        }
+        @include Foundation.mq('pc') {
+            height: 45vh;
+        }
+        &.p-game__area--start{
+            font-size: 10rem;
+        }
+    }
+    &__item{
+    display: block;
+    font-style:Foundation.$j-family
+    }
+    &__input{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    font-size: 3em;
+    font-style:Foundation.$e-family
+    }
+    &__score{
+        min-height: 40vh;
+        padding-top: 15%;
+        margin-bottom:5%;
+        font-size: 4rem;
+        font-style:Foundation.$j-family;
+        @include Foundation.mq('tab-pc') {
+            margin-bottom:15%;
+            padding-top: 10%;
+        }
+    }
+    &__attention{
+        font-size: 1em;
+        padding-top: 1em;
+        @include Foundation.mq('tab-pc') {
+            font-size: 1.5em;
+        }
+    }
+}
+

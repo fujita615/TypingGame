@@ -1,0 +1,52 @@
+@use '../../Foundation';
+
+.c-input {
+    width: 100%;
+    padding: 1rem 1rem;
+    background-color: Foundation.$base;
+    border-radius: 0.7rem;
+    border: 0.1rem solid;
+    color: inherit;
+    &::placeholder {
+        color: inherit;
+    }
+    @media (hover: hover) {
+        &:focus,
+        &:hover {
+            background-color: rgba(Foundation.$base_gray, 0.05);
+        }
+    }
+    @media (hover: none) {
+        &:focus,
+        &:active {
+            background-color: rgba(Foundation.$base_gray, 0.05);
+        }
+    }
+    &:focus-visible {
+        outline: 0.4rem solid;
+        background-color: Foundation.$base_white;
+    }
+    &.c-input--form {
+        // border: 1px;
+        text-align: left;
+        font-family: Foundation.$j-family;
+        background-color: Foundation.$base_white;
+    }
+    &.c-input--anser {
+        border: 1px;
+        text-align: left;
+        font-family: Foundation.$j-family;
+        color: rgba(Foundation.$base_gray, 0.5);
+        font-size: 0.5em;
+        @include Foundation.mq('tab-pc') {
+            font-size: 1em;
+        }
+    }
+    &__label {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        @include Foundation.mq('tab-pc') {
+            font-size: 2rem;
+        }
+    }
+}

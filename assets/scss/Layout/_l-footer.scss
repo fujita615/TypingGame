@@ -1,0 +1,58 @@
+@use '../Foundation';
+
+.l-footer {
+    padding: 3rem 0 2rem;
+    margin-top: auto;
+    &__nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        font-size: 1.9rem;
+        color:Foundation.$base_gray;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    &__info {
+        @include Foundation.mq('tab-pc') {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: reverse;
+            justify-content: space-between;
+        }
+    }
+    &__copyright {
+        text-align: center;
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                color: Foundation.$main;
+            }
+        }
+        @media (hover: none) {
+            &:active,
+            &:focus {
+                color: Foundation.$main;
+            }
+        }
+    }
+    &__dot {
+        display: none;
+        @include Foundation.mq('tab-pc') {
+            display: block;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    &__colophon {
+        text-align: center;
+        margin-bottom: 0.3rem;
+        @include Foundation.mq('tab-pc') {
+            margin-bottom: 0;
+        }
+    }
+}

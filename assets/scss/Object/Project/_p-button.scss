@@ -1,0 +1,24 @@
+@use '../../Foundation';
+
+.p-button{
+width: 100%;
+    &__container {
+        width: 100vw;
+        display: block;
+        @include Foundation.mq('tab-pc') {
+        display: flex;
+        justify-content: center;
+        top: 30vh;
+        }
+    }
+    &__item{
+        flex-basis: 40%;
+        margin: auto;
+        @include Foundation.mq('tab-pc') {
+        margin:5rem;
+        }
+        &.p-button__item--second{
+            background-color: Foundation.$success;
+        }
+    }
+}

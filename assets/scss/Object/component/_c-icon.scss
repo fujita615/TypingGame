@@ -1,0 +1,42 @@
+@use '../../Foundation';
+.c-icon {
+    display: block;
+    &.c-icon--header {
+        width: 5rem;
+        font-size: 4.8rem;
+    }
+    &.c-icon--head-user {
+        display: none;
+        @include Foundation.mq('tab-pc') {
+            display: block;
+            width: 5rem;
+            font-size: 4.8rem;
+        }
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                color: Foundation.$base_gray;
+            }
+        }
+        @media (hover: none) {
+            &:active,
+            &:focus {
+                color: Foundation.$base_gray;
+            }
+        }
+    }
+    &.c-icon--bestscore {
+        font-size: 1em;
+        display:contents;
+    }
+    &.c-icon--score {
+        font-size: 2em;
+        display: contents;
+    }
+    &.c-icon--footer {
+        width: 3.5rem;
+        @include Foundation.mq('tab-pc') {
+            width: 6rem;
+        }
+    }
+}

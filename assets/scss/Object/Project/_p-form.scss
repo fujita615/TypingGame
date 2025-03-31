@@ -1,0 +1,93 @@
+@use '../../Foundation';
+
+.p-form {
+    position: relative;
+    width: 100%;
+    &.p-form--photo {
+        @include Foundation.mq('tab-pc') {
+            width: 50%;
+        }
+    }
+    &.p-form--contact {
+        text-align: left;
+    }
+    &.p-form--mypage {
+        height: 40rem;
+    }
+    &__tab {
+        margin-bottom: 1rem;
+        @include Foundation.mq('tab-pc') {
+            margin-bottom: 2rem;
+        }
+    }
+    &__input {
+        width: 100%;
+        position: relative;
+        margin-bottom: 2rem;
+        text-align: left;
+        &.p-form__input--contact {
+            margin-bottom: 0;
+        }
+    }
+    &__input--photo {
+        height: 48vh;
+        margin-bottom: 0.5rem;
+    }
+    &__output {
+        display: block;
+        text-align: center;
+        margin: auto;
+        z-index: 25;
+    }
+    &__output-image {
+        margin-top: 1rem;
+        height: 47vh;
+        text-align: center;
+    }
+    &__photo {
+        object-fit: cover;
+        margin: auto;
+        width: 100%;
+        max-height: 47vh;
+        position: absolute;
+        background-color: Foundation.$base;
+    }
+    &__label {
+        font-size: 1.8rem;
+        font-family: Foundation.$j-family;
+        margin-bottom: 0.5rem;
+        text-align: left;
+        @include Foundation.mq('tab-pc') {
+            font-size: 2rem;
+        }
+    }
+    &__input-icon {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.6rem;
+    }
+    &__button {
+        margin: auto;
+        display: block;
+    }
+    &__error-message {
+        color: red;
+        font-size: 1.4rem;
+    }
+    &__error {
+        height: 4rem;
+        padding-top: 1rem;
+        &.p-form__error--tags {
+            padding: 1.6rem;
+            margin-bottom: 3rem;
+        }
+        &.p-form__error--fulltag {
+            padding: 0;
+            height: 1.6rem;
+        }
+        &.p-form__error--photo {
+            padding: 0;
+            height: 4.7rem;
+        }
+    }
+}
