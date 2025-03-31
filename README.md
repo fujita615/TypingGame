@@ -28,7 +28,7 @@ https://game.yf5160.com
 ## データベース
 - Redis
 
-## 使用Webサービス
-- firebase
--- Realtime Database
--- Authentication
+## 使用サービス
+- google firebase
+    - Realtime Database
+  - Authentication
