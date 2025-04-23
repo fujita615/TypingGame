@@ -1,0 +1,59 @@
+@use '../../Foundation';
+
+.p-message {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 55;
+    animation: lightbox 0.2s ease-out;
+
+    @include Foundation.mq('tab-pc') {
+        top: 20%;
+        height: 50%;
+    }
+    &.p-message--success {
+        background-color: rgba(Foundation.$base_white, 0.1);
+    }
+    &.p-message--alert {
+        background-color: rgba(Foundation.$base_black, 0.2);
+    }
+    &__container {
+        width: 90%;
+        padding: 5%;
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
+        animation: sizeup 0.5s ease-out;
+
+        &.p-message__container--success {
+            background-color: Foundation.$base_white;
+            border-color: Foundation.$base_black;
+        }
+        &.p-message__container--alert {
+            background-color: Foundation.$base_white;
+        }
+    }
+    &__mark {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        &.p-message__mark--alert {
+            color: Foundation.$alert;
+        }
+        &.p-message__mark--success {
+            color: Foundation.$success;
+        }
+    }
+    &__message {
+        font-size: 1.5rem;
+        color: Foundation.$base_black;
+        @include Foundation.mq('tab-pc') {
+            font-size: 2rem;
+        }
+    }
+}

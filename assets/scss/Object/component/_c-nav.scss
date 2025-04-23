@@ -1,0 +1,69 @@
+@use '../../Foundation';
+
+.c-nav {
+    display: flex;
+    &.c-nav--sns {
+        flex-wrap: wrap;
+        font-size: 3.2rem;
+        color: Foundation.$icon;
+    }
+    &__item {
+        display: block;
+        font-size:4.4rem;
+        &--first-margin-0:first-child {
+            margin-left: 0;
+        }
+    }
+    &__link {
+        position: relative;
+        color: inherit;
+        font-size: inherit;
+        font-family: Foundation.$e-family;
+        margin-right: 1rem;
+        @media (hover: hover) {
+            &:hover,
+            &:focus {
+                color: Foundation.$base_gray;
+            }
+        }
+        @media (hover: none) {
+            &:active,
+            &:focus {
+                color: Foundation.$base_gray;
+            }
+        }
+        &.c-nav__link--footer {
+            font-size: 2rem;
+            font-family: Foundation.$e-family;
+            margin-right: 1rem;
+            @media (hover: hover) {
+                &:hover,
+                &:focus {
+                    color: Foundation.$main;
+                }
+            }
+            @media (hover: none) {
+                &:active,
+                &:focus {
+                    color: Foundation.$main;
+                }
+            }
+        }
+        &.c-nav__link--sns {
+            color: Foundation.$icon;
+            font-size: 4rem;
+            @media (hover: hover) {
+                &:hover,
+                &:focus {
+                    color: Foundation.$main;
+                }
+            }
+            @media (hover: none) {
+                &:active,
+                &:focus {
+                    color: Foundation.$main;
+                }
+            }
+        }
+    }
+}

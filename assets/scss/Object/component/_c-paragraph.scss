@@ -1,0 +1,12 @@
+@use '../../Foundation';
+
+.c-paragraph {
+    word-wrap: break-word;
+    &.c-paragraph--article {
+        margin-block-start: 1.6rem;
+        margin-block-end: 1.6rem;
+    }
+    &.c-paragraph--note {
+        color: Foundation.$success;
+    }
+}

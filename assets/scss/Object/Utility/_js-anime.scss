@@ -1,0 +1,64 @@
+@use '../../Foundation';
+
+//Transition fullimg
+.fullimg-enter-active {
+    transition: opacity 1s ease;
+}
+.fullimg-leave-active {
+    transition: opacity 1s ease-out;
+}
+.fullimg-enter,
+.fullimg-leave-to {
+    opacity: 0;
+}
+.fullimg-enter-from {
+    opacity: 0;
+}
+.fullimg-enter-to,
+.fullimg-leave {
+    opacity: 1;
+}
+.fullimg-leave-from {
+    opacity: 1;
+}
+
+@keyframes lightbox {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sizeup {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

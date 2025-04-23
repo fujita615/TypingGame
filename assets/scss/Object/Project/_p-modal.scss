@@ -1,0 +1,70 @@
+@use '../../Foundation';
+
+.p-modal {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(Foundation.$base_black, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 20;
+    animation: lightbox 0.5s ease-out;
+
+    &__dialog {
+        background-color: Foundation.$base_white;
+        max-width: 90vw;
+        margin: auto;
+        max-height: 80vh;
+        border: 0.1rem solid Foundation.$base_black;
+        box-shadow: 0 0.4rem 1rem rgba(Foundation.$base_gray, 0.1);
+        border-radius: 0.6rem;
+        overflow:scroll;
+        animation: sizeup 1s ease-out;
+        @include Foundation.mq('tab-pc') {
+            max-width: 70vw;
+        }
+    }
+    &__form {
+        background-color: Foundation.$base_white;
+        max-width: 90vw;
+        max-height: 95vh;
+        padding: 2%;
+        border: 0.1rem solid Foundation.$base_black;
+        box-shadow: 0 0.4rem 1rem rgba(Foundation.$base_gray, 0.1);
+        border-radius: 0.6rem;
+        overflow: auto;
+        animation: sizeup 1s ease-out;
+        @include Foundation.mq('tab-pc') {
+            max-width: 80%;
+        }
+    }
+    &__header {
+        text-align: center;
+        border-bottom: 0.1rem solid Foundation.$base_gray;
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+    &__title {
+        // font-size: 1em;
+        font-weight: 700;
+        margin: 0;
+    }
+    &__body {
+        overflow: auto;
+        padding: 3rem 1.5rem;
+        max-height: 80vh;
+        text-align: left;
+        font-family: Foundation.$j-family;
+    }
+    &__footer {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    &__message {
+        color: Foundation.$base_white;
+    }
+}

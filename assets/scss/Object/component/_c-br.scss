@@ -1,0 +1,25 @@
+@use '../../Foundation';
+
+.c-br {
+    //スマホサイズのみ改行
+    &.c-br--sp {
+        display: block;
+        @include Foundation.mq('tab-pc') {
+            display: none;
+        }
+    }
+    //スマホ,タブレットサイズのみ改行
+    &.c-br--sp-tab {
+        display: block;
+        @include Foundation.mq('pc') {
+            display: none;
+        }
+    }
+    //タブレット,PCサイズのみ改行
+    &.c-br--tab-pc {
+        display: none;
+        @include Foundation.mq('tab-pc') {
+            display: block;
+        }
+    }
+}
